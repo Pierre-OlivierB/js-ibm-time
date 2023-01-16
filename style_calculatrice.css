@@ -24,7 +24,7 @@ td input {
   border: 1px solid transparent;
 }
 td:first-child input {
-  width: 40px;
+  /* width: 100px; */
   height: 40px;
   cursor: default;
 }
