@@ -32,3 +32,17 @@ section {
   flex-direction: column;
   align-items: center;
 }
+button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  background: hsl(240, 100%, 85%);
+  border-radius: 10px;
+  transition: all 1s ease;
+  /* transition: color 1s ease; */
+}
+button:hover {
+  cursor: pointer;
+  border-color: hsl(240, 100%, 25%);
+  color: brown;
+}
