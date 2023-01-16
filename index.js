@@ -117,28 +117,52 @@ function fact(e) {
   //   }
   //   let flag = 1;
   if (e == 0) {
-    inFact = 1;
+    return inFact;
   }
-  for (let i = e; i > 0; i--) {
-    let result;
-    inFact *= i;
-    for (let j = i - 1; j > 0; j--) {
-      result += inFact;
-    }
-  }
-  //   while (0 < e) {
-  //     let add = e;
-  //     while (0 < e - 1) {
-  //       inFact *= e;
-  //       e--;
-  //       add += inFact;
-  //     }
-  //     console.log(add);
-  //     e--;
+  // for (let i = e; i > 0; i--) {
+  //   let result;
+  //   inFact *= i;
+  //   for (let j = i - 1; j > 0; j--) {
+  //     result += inFact;
   //   }
+  // }
+
+  inFact = 0;
+  while (e > 0) {
+    let add = e;
+    let result = 1;
+    while (add > 0) {
+      result *= add;
+      add--;
+    }
+    inFact += result;
+
+    // inFact += result;
+    // result = e - 1;
+    // while (0 <add) {
+    //   inFact *= e;
+    //   e--;
+    //   add--;
+
+    // }
+    // console.log(add);
+    e--;
+  }
 
   return inFact;
 }
-fact(input);
-console.log(inFact);
+// fact(parseInt(input));
+// console.log(inFact);
+// let n = parseInt(prompt("test olivier"));
+// function test() {
+//   let sauvegarde = 0;
+//   console.log(n);
+//   while (n > 0) {
+//     sauvegarde += n;
+//     n--;
+//   }
+//   console.log(sauvegarde);
+//   return sauvegarde;
+// }
+// console.log(test());
 //
