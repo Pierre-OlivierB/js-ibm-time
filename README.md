@@ -1,2 +1,11 @@
 # js-ibm-time
-time project 
+
+###time project
+
+###index = cours 1
+
+###chrono
+
+###calculatrice => mis en pause
+
+###cours = cours 2
