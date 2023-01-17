@@ -34,7 +34,10 @@ gpBtn.forEach((e) => {
 function add(e) {
   //   console.log(e.target.value);
   let valueBtn = e.target.value;
+  console.log(screen.attributes);
+  // if (screen.length < 20) {
   screen.value = screen.value + valueBtn;
+  // }
 }
 // gpBtn.addEventListener("click", add);
 // for (let index = 0; index < array.length; index++) {
