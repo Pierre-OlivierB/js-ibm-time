@@ -84,18 +84,31 @@ switch (leMois) {
 }
 // alert("Pour le mois de " + lesMois_arr[leMois] + " penser à : " + txt);
 
-var art = 5;
-var artPlus = 5.6;
-var tot = art + art * 0.056;
-console.log(tot);
-var art2 = 2.6;
-var artMinus = 2.2;
-var tot2 = art2 - art2 * 0.022;
-console.log(tot2);
-console.log(Math.round(61.213213, 2));
+//---------------------------------------------------
+//Quizz
 
-var date = new Date();
-console.log(date.now());
+// var art = 5;
+// var artPlus = 5.6;
+// var tot = art + art * 0.056;
+// console.log(tot);
+// var art2 = 2.6;
+// var artMinus = 2.2;
+// var tot2 = art2 - art2 * 0.022;
+// console.log(tot2);
+// console.log(Math.round(61.213213, 2));
+
+// var date = new Date();
+// console.log(date.now());
+
+//-----------------------------------
+//For
+for (var i = 0; i < 5; i++) {
+  console.log("début i=" + i);
+  console.log("Processing.");
+  console.log("fin i=" + i);
+  console.log("-------------");
+}
+console.log("Après accolade i=" + i);
 //-----------------------------
 //trash
 //------------------------
