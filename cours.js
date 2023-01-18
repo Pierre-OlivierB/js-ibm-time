@@ -1,6 +1,6 @@
 // console.log("test");
-//-------------------------------
-//while / do while
+//!-------------------------------
+//*while / do while
 let bol = 10;
 do {
   // console.log("je mange");
@@ -12,7 +12,8 @@ while (bol > 6) {
   // console.log("je bois");
   bol--;
 }
-//switch
+//!--------------------------------
+//*switch
 var test = "10";
 // var test = 10;
 switch (test) {
@@ -84,8 +85,8 @@ switch (leMois) {
 }
 // alert("Pour le mois de " + lesMois_arr[leMois] + " penser à : " + txt);
 
-//---------------------------------------------------
-//Quizz
+//!---------------------------------------------------
+//*Quizz
 
 // var art = 5;
 // var artPlus = 5.6;
@@ -100,8 +101,8 @@ switch (leMois) {
 // var date = new Date();
 // console.log(date.now());
 
-//-----------------------------------
-//For
+//!-----------------------------------
+//*For
 // for (var i = 0; i < 5; i++) {
 //   console.log("début i=" + i);
 //   console.log("Processing.");
@@ -115,8 +116,8 @@ for (let i = 5; i > 0; i--) {
 }
 //-----------------------------------
 //
-//-----------------------------
-//trash
+//!-----------------------------
+//*trash
 //------------------------
 // switch (key) {
 //   case value:
