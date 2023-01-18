@@ -102,13 +102,19 @@ switch (leMois) {
 
 //-----------------------------------
 //For
-for (var i = 0; i < 5; i++) {
-  console.log("début i=" + i);
-  console.log("Processing.");
-  console.log("fin i=" + i);
-  console.log("-------------");
+// for (var i = 0; i < 5; i++) {
+//   console.log("début i=" + i);
+//   console.log("Processing.");
+//   console.log("fin i=" + i);
+//   console.log("-------------");
+// }
+// console.log("Après accolade i=" + i);
+
+for (let i = 5; i > 0; i--) {
+  console.log("décrémentation i=" + i);
 }
-console.log("Après accolade i=" + i);
+//-----------------------------------
+//
 //-----------------------------
 //trash
 //------------------------
