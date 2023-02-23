@@ -90,6 +90,23 @@ var calcRacSvg;
 //     return (screen.value = Math.sqrt(calcRacSvg));
 //   }
 // }
+
+function specialCalc(calcSpe) {
+  calcRacSvg = calcSpe.split(" ");
+
+  if (calcRacSvg.includes("V")) {
+    console.log(calcRacSvg);
+    screen.value = calcRacSvg[0] * Math.sqrt(calcRacSvg[2]);
+  }
+  if (calcRacSvg.includes("^")) {
+    console.log(calcRacSvg);
+    screen.value = Math.pow(calcRacSvg[0], calcRacSvg[2]);
+  }
+  if (calcRacSvg.includes("log")) {
+    console.log(calcRacSvg);
+    screen.value = calcRacSvg[0] * Math.log(calcRacSvg[2]);
+  }
+}
 function add(e) {
   //   console.log(e.target.value);
   let valueBtn = e.target.value;
@@ -98,20 +115,21 @@ function add(e) {
     console.log("racine");
     // racCalc(screen.value, e);
     // return (screen.value = Math.sqrt(screen.value));
-    screen.value = screen.value + `V`;
+    screen.value = screen.value + ` V `;
   }
   if (valueBtn == "pow") {
     console.log("puissance");
     // racCalc(screen.value, e);
-    screen.value = screen.value + "^";
+    screen.value = screen.value + " ^ ";
   }
   if (valueBtn == "log") {
     console.log("puissance");
     // racCalc(screen.value, e);
-    screen.value = screen.value + "log ";
+    screen.value = screen.value + " log ";
   }
   if (valueBtn == "=") {
-    console.log(eval(screen.value));
+    // console.log(eval(screen.value));
+    specialCalc(screen.value);
     return (screen.value = Math.ceil(eval(screen.value)));
   }
   if (
@@ -121,6 +139,9 @@ function add(e) {
     valueBtn != "log"
   ) {
     screen.value = screen.value + valueBtn;
+  }
+  if (valueBtn == "C") {
+    screen.value = "";
   }
 }
 // gpBtn.addEventListener("click", add);
