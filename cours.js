@@ -111,11 +111,44 @@ switch (leMois) {
 // }
 // console.log("Après accolade i=" + i);
 
-for (let i = 5; i > 0; i--) {
-  console.log("décrémentation i=" + i);
+// for (let i = 5; i > 0; i--) {
+//   console.log("décrémentation i=" + i);
+// }
+//!-----------------------------------
+//*Function
+var name = "denver";
+var nikname = "dino";
+
+function rtc(test, call) {
+  console.log("coco");
+  console.log("walla");
+  console.log(test + " " + call);
 }
-//-----------------------------------
-//
+
+rtc(name, nikname);
+
+var elementOne = 5;
+var elementTwo = 6;
+var mult = 2;
+var tot;
+
+function add(first, second) {
+  tot = first + second;
+  elementOne *= mult;
+  elementTwo *= mult;
+  return tot;
+}
+add(elementOne, elementTwo);
+// console.log(tot);
+// console.log(elementOne, elementTwo);
+
+// add(elementOne, elementTwo);
+// console.log(tot);
+// console.log(elementOne, elementTwo);
+// console.log("test" + (1 + 2));
+var cake;
+cake = add(elementOne, elementTwo);
+// console.log(cake);
 //!-----------------------------
 //*trash
 //------------------------
