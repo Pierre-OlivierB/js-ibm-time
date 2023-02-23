@@ -82,6 +82,7 @@ gpBtn.forEach((e) => {
 });
 var calcSvg;
 var calcRacSvg;
+var flagCalc = false;
 // function racCalc(add, targ) {
 //   let valueBtn = targ.target.value;
 //   if (valueBtn !== "=") {
@@ -97,49 +98,75 @@ function specialCalc(calcSpe) {
   if (calcRacSvg.includes("V")) {
     console.log(calcRacSvg);
     screen.value = calcRacSvg[0] * Math.sqrt(calcRacSvg[2]);
+    flagCalc = true;
   }
   if (calcRacSvg.includes("^")) {
     console.log(calcRacSvg);
     screen.value = Math.pow(calcRacSvg[0], calcRacSvg[2]);
+    flagCalc = true;
   }
   if (calcRacSvg.includes("log")) {
     console.log(calcRacSvg);
     screen.value = calcRacSvg[0] * Math.log(calcRacSvg[2]);
+    flagCalc = true;
+  }
+}
+function valueSqrt(inputValue) {
+  if (inputValue == "sqrt") {
+    return (screen.value = screen.value + ` V `);
+  }
+}
+function valuePow(inputValue) {
+  if (inputValue == "pow") {
+    return (screen.value = screen.value + " ^ ");
+  }
+}
+function valueLog(inputValue) {
+  if (inputValue == "log") {
+    return (screen.value = screen.value + " ^ ");
+  }
+}
+function increValue(inputValue) {
+  if (
+    screen.value.length < 20 &&
+    inputValue != "sqrt" &&
+    inputValue != "pow" &&
+    inputValue != "log" &&
+    inputValue != "="
+  ) {
+    return (screen.value = screen.value + inputValue);
+  }
+}
+function doCalcul(inputValue) {
+  if (inputValue == "=") {
+    // console.log(eval(screen.value));
+    specialCalc(screen.value);
+    return (screen.value = Math.ceil(eval(screen.value)));
+  }
+}
+function calculateInCalcul() {}
+function verifCalcExist() {
+  if (
+    calcRacSvg.includes("+") ||
+    calcRacSvg.includes("-") ||
+    calcRacSvg.includes("/") ||
+    calcRacSvg.includes("*")
+  ) {
+    console.log(calcRacSvg);
+    flagCalc = true;
   }
 }
 function add(e) {
   //   console.log(e.target.value);
   let valueBtn = e.target.value;
   // console.log(screen.attributes);
-  if (valueBtn == "sqrt") {
-    console.log("racine");
-    // racCalc(screen.value, e);
-    // return (screen.value = Math.sqrt(screen.value));
-    screen.value = screen.value + ` V `;
-  }
-  if (valueBtn == "pow") {
-    console.log("puissance");
-    // racCalc(screen.value, e);
-    screen.value = screen.value + " ^ ";
-  }
-  if (valueBtn == "log") {
-    console.log("puissance");
-    // racCalc(screen.value, e);
-    screen.value = screen.value + " log ";
-  }
-  if (valueBtn == "=") {
-    // console.log(eval(screen.value));
-    specialCalc(screen.value);
-    return (screen.value = Math.ceil(eval(screen.value)));
-  }
-  if (
-    screen.value.length < 20 &&
-    valueBtn != "sqrt" &&
-    valueBtn != "pow" &&
-    valueBtn != "log"
-  ) {
-    screen.value = screen.value + valueBtn;
-  }
+  verifCalcExist();
+
+  valueSqrt(valueBtn);
+  valuePow(valueBtn);
+  valueLog(valueBtn);
+  doCalcul(valueBtn);
+  increValue(valueBtn);
   if (valueBtn == "C") {
     screen.value = "";
   }
